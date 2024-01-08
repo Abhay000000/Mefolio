@@ -1,0 +1,375 @@
+@import "../node_modules/react-modal-video/scss/modal-video.scss";
+.font-style {
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+  padding-left: 2px;
+}
+.home-img::before {
+  content: " ";
+  position: absolute;
+  left: 43.5%;
+  margin-top: -31px;
+  height: 110%;
+  width: 19%;
+  background-color: white;
+  transform: rotate(10deg);
+}
+@media only screen and (max-width: 768px) {
+  .home-img::before {
+    content: " ";
+    position: relative;
+  }
+  .hover-absolute {
+    display: none !important;
+  }
+}
+.hover-relative {
+  transition: all 1s;
+}
+.hover-absolute {
+  transition: all 1s;
+}
+.hover-relative:hover .hover-absolute {
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.bg-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url(https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+}
+.footer-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url(https://e0.pxfuel.com/wallpapers/737/423/desktop-wallpaper-px-recording-studio-background-music-studio-thumbnail.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.active-scroll-spy {
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+  color: #5b5a5a;
+  transform-origin: bottom left;
+  transform: scale(1, 1);
+}
+
+.active-scroll-spy::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform-origin: right top;
+  transform: scaleY(1);
+  transition: color 0.1s, transform 0.2s ease-out;
+}
+.active-scroll-spy:active::before {
+  background-color: #000;
+}
+.active-scroll-spy:hover::before,
+a:focus::before {
+  transform-origin: bottom right;
+  transform: scale(1, 1);
+}
+
+.active-2 {
+  background-color: black;
+  color: white;
+  opacity: 1;
+}
+
+.hover-link {
+  color: #18272f;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.hover-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #18272f;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-link2::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:wght@400;700&display=swap");
+.bg-img-2 {
+  background-image: url(./asset/img/496523.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+  .bg-img-2 {
+    background-position: center;
+    background-position-x: left;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bg-img-2 {
+    background-position: center;
+  }
+}
+.contact {
+  font-family: "Poppins", sans-serif, "arial";
+  font-weight: 600;
+  font-size: 72px;
+  color: white;
+  text-align: center;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #999;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 48%;
+  margin: 1rem 5px;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 1750px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+
+.styled-input label {
+  color: #999;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+.input-container {
+  width: 100%;
+  max-width: 80%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  float: right;
+  padding: 7px 35px;
+  border-radius: 60px;
+  display: inline-block;
+  background-color: #4b8cfb;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+input[type="checkbox"] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type="checkbox"]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+.rgba-bg-color {
+  background-color: rgba(68, 68, 66, 0.4);
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:wght@400;700&display=swap");
+.sec-2-hero-img {
+  background-image: url(asset/img/sec-2-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+  .sec-2-hero-img {
+    background-position: center;
+    background-position-x: left;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sec-2-hero-img {
+    background-position: center;
+  }
+}
+
+.Richard::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  width: 100%;
+  height: 5px;
+  backdrop-filter: blur(8px);
+  background-color: tomato;
+  filter: blur(2px);
+}
+.sec-3-img::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  border: 3px solid tomato;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  z-index: -1;
+  filter: blur(2px);
+}
+.p-after::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+}
+/* .sec-4-img::after{
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  border: 3px solid  tomato;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  z-index: -1;
+  filter: blur(2px);
+} */
+.sec-4-img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  filter: drop-shadow(2px 4px 6px black);
+  left: -15%;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    /* transform: rotate(0deg); */
+    top: 0%;
+  }
+  50% {
+    top: 5%;
+  }
+  100% {
+    /* transform: rotate(360deg); */
+    top: 0%;
+  }
+}
+
+.text-word {
+  font-family: "Homemade Apple", cursive;
+  position: absolute;
+  top: 15%;
+  right: -25%;
+  width: 35%;
+  transform: translate(-15%, 25%);
+  font-size: larger;
+  letter-spacing: 0px;
+  transform: rotate(-30deg);
+  filter: brightness(0.5);
+}
+@media only screen and (max-width: 1024px) {
+  .text-word {
+    right: -2%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .text-word {
+    right: -5%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .text-word {
+    right: 0%;
+  }
+}
